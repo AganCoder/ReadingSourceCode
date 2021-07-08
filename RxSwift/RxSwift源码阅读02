@@ -1,0 +1,25 @@
+# RxSwift 源码阅读
+
+仓库地址: https://github.com/ReactiveX/RxSwift/tree/177ab4272f06ee8c14f23cff55021d0468ff2812
+
+
+```swift
+// 自引用对象
+class RefTarget: NSObject {
+    private var retainSelf: RefTarget?
+    
+    override init() {
+        super.init()
+        
+        self.retainSelf = self
+    }
+    
+    func dispose() {
+        self.retainSelf = nil
+    }
+    
+    deinit {
+        debugPrint("\(self) deinit ")
+    }
+}
+```
