@@ -3,6 +3,10 @@
 仓库地址: https://github.com/ReactiveX/RxSwift/tree/177ab4272f06ee8c14f23cff55021d0468ff2812
 
 
+## 自引用对象
+
+需要一个合理的地方进行清除
+
 ```swift
 // 自引用对象
 class RefTarget: NSObject {
@@ -23,3 +27,14 @@ class RefTarget: NSObject {
     }
 }
 ```
+
+## keyPath
+
+参考链接： 
+    1. https://www.swiftbysundell.com/articles/the-power-of-key-paths-in-swift/
+    2. https://www.swiftbysundell.com/tips/passing-key-paths-as-functions/
+
+
+## dynamicMemberLookup 
+参考链接：
+    1. https://juejin.cn/post/6844903621306351624
